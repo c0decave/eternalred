@@ -239,13 +239,13 @@ def run(args):
 
 
 def main():
-	parser_desc = 'smb share enumerator %s' % version
+	parser_desc = 'smb public share enumerator %s by the dash' % version
 	prog_desc = 'smb_enum.py'
 	parser = argparse.ArgumentParser(prog = prog_desc, description=parser_desc)
 	parser.add_argument("-l","--host",action="store",required=False,help='host to check version',dest='host')
 	parser.add_argument("-L","--hostlist",action="store",required=False,help='hostlist to check version',dest='hostlist')
 	parser.add_argument("-p","--port",action="store",required=False,default=139,help='ipmi port',dest='port')
-	parser.add_argument("-t","--threads",action="store",required=False,default=50,help='how many threads',dest='thrCnt')
+	parser.add_argument("-t","--threads",action="store",required=False,default=10,help='how many threads',dest='thrCnt')
 	parser.add_argument("-T","--timeout",action="store",required=False,default=5,help='timeout of socket recv',dest='timeout')
 	parser.add_argument("-o","--outfile",action="store",required=False,help='outfile in txt format',dest='outfile',default=None)
 	parser.add_argument("-r","--unrandom",action="store",required=False,help='disable random targetlist',dest='unrandom')
